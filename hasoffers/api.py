@@ -22,14 +22,14 @@ class Client(object):
 
     ENDPOINT = "https://api.hasoffers.com/v3/"
 
-    def __init__(self, network_token, network_id):
+    def __init__(self, api_key, network_id):
         """
         Constructor
 
-        :param network_token: hasoffers network token
+        :param api_key: hasoffers api_key
         :param network_id: hasoffers network id
         """
-        self.network_token = network_token
+        self.api_key = api_key
         self.network_id = network_id
 
     def _prepare_params(self, **kwargs):
@@ -67,6 +67,6 @@ class Client(object):
         :return: instance of response_class
         """
         params = self._prepare_params(**kwargs)
-        params.update({"NetworkToken": self.network_token, "NetworkId": self.network_id, "Method": method})
+        params.update({"api_key": self.api_key, "NetworkId": self.network_id, "Method": method})
         response = requests.get("{}{}.json".format(self.ENDPOINT, target), params=params)
         return response_class(response.json())
