@@ -49,10 +49,10 @@ class BaseClient(object):
                 params.update({param: value})
         return params
 
-    def request(self, target, method, response_class=Response, verb='GET', **kwargs):
+    def request(self, target, method, response_class=hasoffers.Response, verb='GET', **kwargs):
         """
         Perform a call to the API endpoint
-
+    ​
         :param target: hasoffer entity
         :param method: method performed on target
         :param response_class: response class wrapping the raw response
@@ -60,10 +60,15 @@ class BaseClient(object):
         :param kwargs: query string parameters
         :return: instance of response_class
         """
+        request_kwargs = {}
+        data_param_name = 'data' if verb == 'POST' else 'params'
         params = self._prepare_params(**kwargs)
         params.update({"Method": method})
         params.update(self.get_auth_params())
-        response = requests.request(verb, "{}{}.json".format(self.ENDPOINT, target), params=params)
+        request_kwargs[data_param_name] = params
+        response = requests.request(verb,
+                                    "{}{}.json".format(self.ENDPOINT, target),
+                                    **request_kwargs)
         return response_class(response.json())
 
 
