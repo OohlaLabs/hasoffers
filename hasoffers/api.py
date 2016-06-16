@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import requests
 
 __all__ = ['Response', 'Client', 'BrandClient', 'AffiliateClient']
