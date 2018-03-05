@@ -2,10 +2,10 @@
 HasOffers
 =========
 
-.. image:: https://pypip.in/version/hasoffers/badge.svg
+.. image:: https://img.shields.io/pypi/v/hasoffers.svg
     :target: https://pypi.python.org/pypi/hasoffers/
 
-.. image:: https://pypip.in/format/hasoffers/badge.svg
+.. image:: https://img.shields.io/pypi/format/hasoffers.svg
     :target: https://pypi.python.org/pypi/hasoffers/
 
 .. image:: https://travis-ci.org/jthi3rry/hasoffers.svg?branch=master
@@ -14,10 +14,10 @@ HasOffers
 .. image:: https://coveralls.io/repos/jthi3rry/hasoffers/badge.png?branch=master
     :target: https://coveralls.io/r/jthi3rry/hasoffers
 
-.. image:: https://pypip.in/py_versions/hasoffers/badge.svg
+.. image:: https://img.shields.io/pypi/pyversions/hasoffers.svg
     :target: https://pypi.python.org/pypi/hasoffers/
 
-.. image:: https://pypip.in/license/hasoffers/badge.svg
+.. image:: https://img.shields.io/pypi/l/hasoffers.svg
     :target: https://pypi.python.org/pypi/hasoffers/
 
 This package provides a Python low-level client for the `HasOffers <http://developers.hasoffers.com/>`_ API.
